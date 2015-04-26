@@ -1,4 +1,5 @@
 ﻿using System;
+using BlackJack.contracts.games;
 
 namespace BlackJack.contracts
 {

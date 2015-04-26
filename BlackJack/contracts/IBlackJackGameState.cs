@@ -1,13 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using BlackJack.contracts.states;
 
 namespace BlackJack.contracts
 {
-    public interface IBlackJackGameState
+    public interface IBlackJackGameState : IGameState
     {
-        List<IPlayer> Players { get; set; }
-        void StartGame();
         void DealCards();
-      
-        IPlayer CurrentPlayer();
     }
 }

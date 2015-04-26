@@ -1,12 +1,11 @@
 ﻿using System;
-using BlackJack.contracts;
-using BlackJack.GameStates.BlackJack;
+using BlackJack.contracts.games;
 
-namespace BlackJack.GameStates
+namespace BlackJack.GameStates.BlackJack
 {
     public class GameStartedState : BlackJackGameState
     {
-        public GameStartedState(IGame game) : base(game)
+        public GameStartedState(IBlackJackGame game) : base(game)
         {
         }
 
@@ -17,7 +16,7 @@ namespace BlackJack.GameStates
 
         public override void DealCards()
         {
-            Game.Dealer.DealCards(Game.CurrentState.CurrentPlayer());
+            Game.Dealer.DealCards(Game.Dealer);
             Game.CurrentState = new CardsDealtState(Game);
         }
     }

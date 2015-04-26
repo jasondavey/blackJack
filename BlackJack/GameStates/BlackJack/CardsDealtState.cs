@@ -1,11 +1,11 @@
 ﻿using System;
-using BlackJack.contracts;
+using BlackJack.contracts.games;
 
 namespace BlackJack.GameStates.BlackJack
 {
     public class CardsDealtState : BlackJackGameState
     {
-        public CardsDealtState(IGame game)
+        public CardsDealtState(IBlackJackGame game)
             : base(game)
         {
         }
@@ -19,7 +19,5 @@ namespace BlackJack.GameStates.BlackJack
         {
             throw new Exception("Cards have been dealt!");
         }
-
-        
     }
 }

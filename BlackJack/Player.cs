@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using BlackJack.contracts;
 
 namespace BlackJack
@@ -12,9 +9,9 @@ namespace BlackJack
         public string LastName { get; set; }
         public List<Card> Cards { private get; set; }
 
-        public void ReceiveCard(Card card)
+        public void ReceiveCards(List<Card> cards)
         {
-            Cards.Add(card);
+            Cards.AddRange(cards);
         }
     }
 }

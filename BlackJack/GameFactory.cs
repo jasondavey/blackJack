@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using BlackJack.contracts;
+using BlackJack.contracts.games;
 using BlackJack.GameOptions;
 
 namespace BlackJack
@@ -23,13 +24,15 @@ namespace BlackJack
                     var cardDeck = new DeckOfCards(aceValueOption);
                     var dealBehavior = new DefaultDealBehavior();
                     var shuffleBehavior = new DefaultShuffleBehavior();
-                    var dealer = new Dealer(cardDeck, dealBehavior, shuffleBehavior);
-                    return new BlackJackStandardEdition();
+                    var dealer = new Dealer(cardDeck, dealBehavior, shuffleBehavior)
+                    {
+                        FirstName = "Dennis",
+                        LastName = "Dealer"
+                    };
+                    return new BlackJackStandardEdition(gameOptions, dealer);
                 }
             }
-            return null;
+            throw new Exception(String.Format("Game type {0} cannot is not recognized by this factory.", gameType));
         }
     }
-}
-
 }

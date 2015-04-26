@@ -22,7 +22,8 @@ namespace BlackJack
 
         public void DealCards(IPlayer player)
         {
-            player.ReceiveCard(CardDeck.NextCard());
+            var cards = new List<Card> {CardDeck.NextCard()};
+            player.ReceiveCards(cards);
         }
 
         public string FirstName { get; set; }
@@ -37,9 +38,9 @@ namespace BlackJack
             return CardDeck;
         }
 
-        public void ReceiveCard(Card card)
+        public void ReceiveCards(List<Card> cards)
         {
-            Cards.Add(card);
+            Cards.AddRange(cards);
         }
     }
 }

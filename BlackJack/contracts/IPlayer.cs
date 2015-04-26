@@ -7,6 +7,6 @@ namespace BlackJack.contracts
         string FirstName { get; set; }
         string LastName { get; set; }
         List<Card> Cards { set; }
-        void ReceiveCard(Card card);
+        void ReceiveCards(List<Card> cards);
     }
 }

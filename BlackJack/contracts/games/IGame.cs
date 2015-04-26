@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using BlackJack.GameStates.BlackJack;
 
-namespace BlackJack.contracts
+namespace BlackJack.contracts.games
 {
     public interface IGame
     {
-        BlackJackGameState CurrentState { get; set; }
+        //IGameState CurrentState { get; set; }
         List<IGameOption> Options { get; set; }
         List<IPlayer> Players { get; set; }
         void AddPlayer(Player player);

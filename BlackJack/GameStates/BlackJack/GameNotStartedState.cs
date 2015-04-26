@@ -1,5 +1,5 @@
 ﻿using System;
-using BlackJack.contracts;
+using BlackJack.contracts.games;
 
 namespace BlackJack.GameStates.BlackJack
 {
@@ -11,6 +11,20 @@ namespace BlackJack.GameStates.BlackJack
 
         public override void StartGame()
         {
+            CanGameStart();
+            Console.WriteLine("Game Started...");
+            Game.CurrentState.CurrentPlayer = Game.Dealer;
+            Game.Dealer.Shuffle();
+            Game.CurrentState = new GameStartedState(Game);
+        }
+
+        public override void DealCards()
+        {
+            throw new Exception("Cannot deal cards before game has started!");
+        }
+
+        private void CanGameStart()
+        {
             if (Game.Dealer == null)
             {
                 throw new Exception("No Dealer at the table!");
@@ -19,17 +33,6 @@ namespace BlackJack.GameStates.BlackJack
             {
                 throw new Exception("No Players at the table!");
             }
-            Console.WriteLine("Game Started...");
-            Game.Dealer.Shuffle();
-            Game.CurrentState = new GameStartedState(Game);
-            
         }
-
-        public override void DealCards()
-        {
-            throw new Exception("Cannot deal cards before game has started!");
-        }
-
-        
     }
 }
