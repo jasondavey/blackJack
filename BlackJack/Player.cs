@@ -1,17 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using BlackJack.contracts;
 
 namespace BlackJack
 {
     public class Player : IPlayer
     {
+        public Player()
+        {
+            Hand = new List<Card>();
+        }
+
+        private List<Card> Hand { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public List<Card> Cards { private get; set; }
 
-        public void ReceiveCards(List<Card> cards)
+        public void ReceiveCard(Card card)
         {
-            Cards.AddRange(cards);
+            Console.WriteLine("{0}", FirstName + " " + LastName + " has received card " + card.Name);
+            Hand.Add(card);
         }
     }
 }

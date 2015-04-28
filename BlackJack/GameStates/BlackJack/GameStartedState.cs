@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using BlackJack.contracts.games;
 
 namespace BlackJack.GameStates.BlackJack
@@ -16,7 +17,7 @@ namespace BlackJack.GameStates.BlackJack
 
         public override void DealCards()
         {
-            Game.Dealer.DealCards(Game.Dealer);
+            Game.Dealer.DealCards(Game.Players.ElementAt(2),2);
             Game.CurrentState = new CardsDealtState(Game);
         }
     }

@@ -12,9 +12,14 @@ namespace BlackJack.GameStates.BlackJack
         public override void StartGame()
         {
             CanGameStart();
-            Console.WriteLine("Game Started...");
             Game.CurrentState.CurrentPlayer = Game.Dealer;
             Game.Dealer.Shuffle();
+           
+            foreach (var player in Game.Players)
+            {
+                Game.Dealer.DealCards(player, 2);
+            }
+
             Game.CurrentState = new GameStartedState(Game);
         }
 

@@ -23,8 +23,8 @@ namespace BlackJack
                     var gameOptions = new List<IGameOption> {aceValueOption};
                     var cardDeck = new DeckOfCards(aceValueOption);
                     var dealBehavior = new DefaultDealBehavior();
-                    var shuffleBehavior = new DefaultShuffleBehavior();
-                    var dealer = new Dealer(cardDeck, dealBehavior, shuffleBehavior)
+                    
+                    var dealer = new Dealer(cardDeck)
                     {
                         FirstName = "Dennis",
                         LastName = "Dealer"

@@ -4,12 +4,7 @@ namespace BlackJack.contracts
 {
     public interface IDeckOfCards
     {
-        IDeckSuite HeartsSuite { get; set; }
-        IDeckSuite SpadesSuite { get; set; }
-        IDeckSuite DiamondsSuite { get; set; }
-        IDeckSuite ClubsSuite { get; set; }
-        List<DeckSuite> Suites { get; }
-
-        Card NextCard();
+        List<Card> Cards { get; }
+        void Shuffle();
     }
 }

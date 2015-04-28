@@ -33,23 +33,26 @@ namespace BlackJack
         public void AddPlayer(Player player)
         {
             Players.Add(player);
+            Console.WriteLine("Player {0} {1} has joined the game.", player.FirstName, player.LastName);
         }
 
         public void RemovePlayer(Player player)
         {
             Players.Remove(player);
+            Console.WriteLine("Player {0} {1} has left the game.", player.FirstName, player.LastName);
         }
 
         public void StartGame()
         {
             CurrentState.StartGame();
+            Console.WriteLine("Game has started.");
             //TODO:Notify subscribers that game is on!
             //EventCoordinator.NotifyEvent(new GameStartedEvent())
         }
 
         public void EndGame()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Game has ended.");
         }
     }
 }

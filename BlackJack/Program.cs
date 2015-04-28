@@ -1,5 +1,6 @@
 ﻿using System;
 using BlackJack.contracts.games;
+using BlackJack.GameOptions;
 
 namespace BlackJack
 {
@@ -9,6 +10,9 @@ namespace BlackJack
         {
             var gameFactory = new GameFactory();
             var blackJackGame = (IBlackJackGame) GameFactory.BuildGame(GameTypes.BlackJackStandardEdition);
+
+            var aceValueOption = new AceValueGameOption { AceValue = 11 };
+            var cardDeck = new DeckOfCards(aceValueOption);
 
 
             //var blackJackGame = new BlackJackGame(gameOptions, dealer, players);
@@ -37,8 +41,7 @@ namespace BlackJack
             blackJackGame.AddPlayer(playerOne);
             blackJackGame.AddPlayer(playerTwo);
             blackJackGame.StartGame();
-            blackJackGame.DealCards();
-
+            
             Console.ReadKey();
         }
     }

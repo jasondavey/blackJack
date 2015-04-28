@@ -17,7 +17,7 @@ namespace BlackJack.GameStates.BlackJack
 
         public override void DealCards()
         {
-            throw new Exception("Cards have been dealt!");
+            throw new Exception("Hand have been dealt!");
         }
     }
 }

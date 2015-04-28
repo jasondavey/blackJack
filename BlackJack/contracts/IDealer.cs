@@ -2,8 +2,8 @@
 {
     public interface IDealer : IPlayer
     {
-        void DealCards(IPlayer player);
-        IDeckOfCards Shuffle();
+        void DealCards(IPlayer player,short numberOfCards);
+        void Shuffle();
         
     }
 }

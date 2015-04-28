@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using BlackJack.contracts;
 
 namespace BlackJack
@@ -8,39 +9,55 @@ namespace BlackJack
 
     public class Dealer : IDealer
     {
-        public Dealer(IDeckOfCards cardDeck, IDealBehavior dealBehavior, IShuffleBehavior shuffleBehavior)
+        public Dealer(IDeckOfCards deckOfCards)
         {
-            CardDeck = cardDeck;
-            DealBehavior = dealBehavior;
-            ShuffleBehavior = shuffleBehavior;
+            DeckOfCards = deckOfCards;
         }
 
-        private IDeckOfCards CardDeck { get; set; }
-        private IDealBehavior DealBehavior { get; set; }
-        private IShuffleBehavior ShuffleBehavior { get; set; }
-
-
-        public void DealCards(IPlayer player)
-        {
-            var cards = new List<Card> {CardDeck.NextCard()};
-            player.ReceiveCards(cards);
-        }
-
+        private List<Card> Hand { get; set; }
+        private IDeckOfCards DeckOfCards { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public List<Card> Cards { private get; set; }
 
 
-        public IDeckOfCards Shuffle()
+        public void DealCards(IPlayer player, short numberOfCards)
         {
-            Console.WriteLine("Shuffling cards...");
-            ShuffleBehavior.Shuffle(CardDeck);
-            return CardDeck;
+            var cardsGiven = 0;
+            Console.WriteLine("Cards left in Deck {0}", DeckOfCards.Cards.Count);
+            while (cardsGiven < numberOfCards)
+            {
+                var card = DeckOfCards.Cards.First();
+                player.ReceiveCard(card);
+                DeckOfCards.Cards.Remove(card);
+                cardsGiven++;
+                Console.WriteLine("Cards left in Deck {0}", DeckOfCards.Cards.Count);
+            }
         }
 
-        public void ReceiveCards(List<Card> cards)
+
+        public void ReceiveCard(Card card)
         {
-            Cards.AddRange(cards);
+            Console.WriteLine("{0}", FirstName + " " + LastName + " has received card " + card.Name);
+            Hand.Add(card);
+        }
+
+        public void Shuffle()
+        {
+//            foreach (var card in DeckOfCards.Cards)
+//            {
+//                Console.WriteLine("{0}",card.Index + ". " + card.Name + " Value: " + card.Value);
+//            }
+
+            //Console.WriteLine("NOT SHUFFLED CARDS NEXT CARD {0}", DeckOfCards.Cards.First().Index + ". " + DeckOfCards.Cards.First().Name + " Value: " + DeckOfCards.Cards.First().Value);
+            Console.WriteLine("Shuffling cards...");
+            DeckOfCards.Shuffle();
+
+//            foreach (var card in DeckOfCards.Cards)
+//            {
+//                Console.WriteLine("{0}", card.Index + ". " + card.Name + " Value: " + card.Value);
+//            }
+//
+//            Console.WriteLine("SHUFFLED CARDS NEXT CARD {0}", DeckOfCards.Cards.First().Index + ". " + DeckOfCards.Cards.First().Name + " Value: " + DeckOfCards.Cards.First().Value);
         }
     }
 }
