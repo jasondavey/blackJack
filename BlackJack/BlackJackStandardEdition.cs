@@ -8,11 +8,12 @@ namespace BlackJack
 {
     public class BlackJackStandardEdition : IBlackJackGame
     {
-        public BlackJackStandardEdition(List<IGameOption> options, IDealer dealer)
+        public BlackJackStandardEdition(List<IGameOption> options, IDealer dealer,ICurrency currency)
         {
             Dealer = dealer;
             Players = new List<IPlayer>();
             Options = options;
+            Currency = currency;
             CurrentState = new GameNotStartedState(this);
         }
 
@@ -23,6 +24,7 @@ namespace BlackJack
         public IDealer Dealer { get; set; }
         public List<IPlayer> Players { get; set; }
         public IDeckOfCards DeckOfCards { get; set; }
+        public ICurrency Currency { get; set; }
 
         public void DealCards()
         {

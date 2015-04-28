@@ -20,5 +20,10 @@ namespace BlackJack
             Console.WriteLine("{0}", FirstName + " " + LastName + " has received card " + card.Name);
             Hand.Add(card);
         }
+
+        public void PlaceBet(ICurrency currency)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

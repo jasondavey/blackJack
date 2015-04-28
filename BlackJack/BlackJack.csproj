@@ -44,12 +44,13 @@
     <Compile Include="Card.cs" />
     <Compile Include="contracts\games\ICardGame.cs" />
     <Compile Include="contracts\games\IBlackJackGame.cs" />
+    <Compile Include="contracts\ICurrency.cs" />
     <Compile Include="contracts\states\ICardGameState.cs" />
     <Compile Include="contracts\states\IBlackJackGameState.cs" />
     <Compile Include="contracts\states\IGameState.cs" />
     <Compile Include="Dealer.cs" />
     <Compile Include="DeckOfCards.cs" />
-    <Compile Include="DefaultDealBehavior.cs" />
+    <Compile Include="Dollar.cs" />
     <Compile Include="GameFactory.cs" />
     <Compile Include="GameOptions\AceValueGameOption.cs" />
     <Compile Include="GameOption.cs" />

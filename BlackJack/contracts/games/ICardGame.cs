@@ -4,5 +4,6 @@
     {
         IDeckOfCards DeckOfCards { get; set; }
         void DealCards();
+
     }
 }

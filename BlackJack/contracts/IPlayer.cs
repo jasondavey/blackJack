@@ -5,5 +5,6 @@
         string FirstName { get; set; }
         string LastName { get; set; }
         void ReceiveCard(Card card);
+        void PlaceBet(ICurrency currency);
     }
 }

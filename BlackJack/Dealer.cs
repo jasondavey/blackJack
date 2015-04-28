@@ -41,23 +41,15 @@ namespace BlackJack
             Hand.Add(card);
         }
 
+        public void PlaceBet(ICurrency currency)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Shuffle()
         {
-//            foreach (var card in DeckOfCards.Cards)
-//            {
-//                Console.WriteLine("{0}",card.Index + ". " + card.Name + " Value: " + card.Value);
-//            }
-
-            //Console.WriteLine("NOT SHUFFLED CARDS NEXT CARD {0}", DeckOfCards.Cards.First().Index + ". " + DeckOfCards.Cards.First().Name + " Value: " + DeckOfCards.Cards.First().Value);
             Console.WriteLine("Shuffling cards...");
             DeckOfCards.Shuffle();
-
-//            foreach (var card in DeckOfCards.Cards)
-//            {
-//                Console.WriteLine("{0}", card.Index + ". " + card.Name + " Value: " + card.Value);
-//            }
-//
-//            Console.WriteLine("SHUFFLED CARDS NEXT CARD {0}", DeckOfCards.Cards.First().Index + ". " + DeckOfCards.Cards.First().Name + " Value: " + DeckOfCards.Cards.First().Value);
         }
     }
 }
