@@ -18,7 +18,6 @@ namespace BlackJack.GameStates.BlackJack
 
         public abstract void StartGame();
 
-
-        public abstract void DealCards();
+        public abstract void Play();
     }
 }

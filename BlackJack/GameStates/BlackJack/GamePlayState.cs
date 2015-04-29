@@ -3,9 +3,9 @@ using BlackJack.contracts.games;
 
 namespace BlackJack.GameStates.BlackJack
 {
-    public class CardsDealtState : BlackJackGameState
+    public class GamePlayState : BlackJackGameState
     {
-        public CardsDealtState(IBlackJackGame game)
+        public GamePlayState(IBlackJackGame game)
             : base(game)
         {
         }
@@ -15,9 +15,11 @@ namespace BlackJack.GameStates.BlackJack
             throw new Exception("Game has already started!");
         }
 
-        public override void DealCards()
+        public override void Play()
         {
-            throw new Exception("Hand have been dealt!");
+            throw new Exception("Game is playing!");
         }
+
+       
     }
 }

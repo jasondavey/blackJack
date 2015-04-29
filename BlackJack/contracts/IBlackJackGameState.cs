@@ -4,6 +4,6 @@ namespace BlackJack.contracts
 {
     public interface IBlackJackGameState : IGameState
     {
-        void DealCards();
+       void Play();
     }
 }

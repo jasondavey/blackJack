@@ -41,10 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlackJackHandEvaluator.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="contracts\games\ICardGame.cs" />
     <Compile Include="contracts\games\IBlackJackGame.cs" />
     <Compile Include="contracts\ICurrency.cs" />
+    <Compile Include="contracts\IHandEvaluator.cs" />
     <Compile Include="contracts\states\ICardGameState.cs" />
     <Compile Include="contracts\states\IBlackJackGameState.cs" />
     <Compile Include="contracts\states\IGameState.cs" />
@@ -63,11 +65,12 @@
     <Compile Include="contracts\IDeckOfCards.cs" />
     <Compile Include="contracts\IBlackJackGameState.cs" />
     <Compile Include="contracts\IAceValueGameOption.cs" />
-    <Compile Include="GameStates\BlackJack\CardsDealtState.cs" />
+    <Compile Include="GameStates\BlackJack\GamePlayState.cs" />
     <Compile Include="GameStates\BlackJack\BlackJackGameState.cs" />
     <Compile Include="GameStates\BlackJack\GameNotStartedState.cs" />
     <Compile Include="contracts\IGameFactory.cs" />
     <Compile Include="GameTypes.cs" />
+    <Compile Include="HandChoicesEnum.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

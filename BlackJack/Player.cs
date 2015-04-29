@@ -17,7 +17,7 @@ namespace BlackJack
 
         public void ReceiveCard(Card card)
         {
-            Console.WriteLine("{0}", FirstName + " " + LastName + " has received card " + card.Name);
+            Console.WriteLine("{0}", FirstName + " " + LastName + " has received an " + card.Name);
             Hand.Add(card);
         }
 

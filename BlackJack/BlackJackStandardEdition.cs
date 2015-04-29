@@ -26,9 +26,9 @@ namespace BlackJack
         public IDeckOfCards DeckOfCards { get; set; }
         public ICurrency Currency { get; set; }
 
-        public void DealCards()
+        public void Play()
         {
-            CurrentState.DealCards();
+            CurrentState.Play();
         }
 
 
@@ -47,7 +47,7 @@ namespace BlackJack
         public void StartGame()
         {
             CurrentState.StartGame();
-            Console.WriteLine("Game has started.");
+            
             //TODO:Notify subscribers that game is on!
             //EventCoordinator.NotifyEvent(new GameStartedEvent())
         }

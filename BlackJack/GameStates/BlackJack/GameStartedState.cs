@@ -8,17 +8,20 @@ namespace BlackJack.GameStates.BlackJack
     {
         public GameStartedState(IBlackJackGame game) : base(game)
         {
+            Console.WriteLine("Game started.");
         }
 
         public override void StartGame()
         {
-            throw new Exception("Game has already started!");
+            throw new Exception("Game has already started");
+           
         }
 
-        public override void DealCards()
+        
+        public override void Play()
         {
-            Game.Dealer.DealCards(Game.Players.ElementAt(2),2);
-            Game.CurrentState = new CardsDealtState(Game);
+            Game.Dealer.DealCards(Game.Players, 2);
+            Game.CurrentState = new GamePlayState(Game);
         }
     }
 }

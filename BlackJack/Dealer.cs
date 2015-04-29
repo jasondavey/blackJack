@@ -20,17 +20,22 @@ namespace BlackJack
         public string LastName { get; set; }
 
 
-        public void DealCards(IPlayer player, short numberOfCards)
+        public void DealCards(List<IPlayer> players, short numberOfCards)
         {
-            var cardsGiven = 0;
-            Console.WriteLine("Cards left in Deck {0}", DeckOfCards.Cards.Count);
-            while (cardsGiven < numberOfCards)
+            
+
+            foreach (var player in players)
             {
-                var card = DeckOfCards.Cards.First();
-                player.ReceiveCard(card);
-                DeckOfCards.Cards.Remove(card);
-                cardsGiven++;
+                var cardsGiven = 0;
                 Console.WriteLine("Cards left in Deck {0}", DeckOfCards.Cards.Count);
+                while (cardsGiven < numberOfCards)
+                {
+                    var card = DeckOfCards.Cards.First();
+                    player.ReceiveCard(card);
+                    DeckOfCards.Cards.Remove(card);
+                    cardsGiven++;
+                    Console.WriteLine("Cards left in Deck {0}", DeckOfCards.Cards.Count);
+                }
             }
         }
 

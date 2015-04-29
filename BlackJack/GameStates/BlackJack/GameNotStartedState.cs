@@ -11,21 +11,17 @@ namespace BlackJack.GameStates.BlackJack
 
         public override void StartGame()
         {
+            Console.WriteLine("Gathering Game dependencies");
             CanGameStart();
+            Console.WriteLine("Dependencies Gathered");
             Game.CurrentState.CurrentPlayer = Game.Dealer;
             Game.Dealer.Shuffle();
-           
-            foreach (var player in Game.Players)
-            {
-                Game.Dealer.DealCards(player, 2);
-            }
-
             Game.CurrentState = new GameStartedState(Game);
         }
 
-        public override void DealCards()
+        public override void Play()
         {
-            throw new Exception("Cannot deal cards before game has started!");
+            throw new Exception("Cannot play before game has started!");
         }
 
         private void CanGameStart()

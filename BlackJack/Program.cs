@@ -9,7 +9,7 @@ namespace BlackJack
         {
             var blackJackGame = (IBlackJackGame) GameFactory.BuildGame(GameTypes.BlackJackStandardEdition);
 
-
+            
             var playerOne = new Player
             {
                 FirstName = "Winston",
@@ -28,12 +28,12 @@ namespace BlackJack
                 LastName = "Pistol"
             };
 
-
             blackJackGame.AddPlayer(playerOne);
             blackJackGame.AddPlayer(playerTwo);
             blackJackGame.AddPlayer(playerThree);
             blackJackGame.StartGame();
-
+            blackJackGame.Play();
+            
             Console.ReadKey();
         }
     }
