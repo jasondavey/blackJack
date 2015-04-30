@@ -6,6 +6,6 @@ namespace BlackJack.contracts
     {
         void DealCards(List<IPlayer> player,short numberOfCards);
         void Shuffle();
-        
+       
     }
 }

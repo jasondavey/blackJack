@@ -7,8 +7,8 @@ namespace BlackJack.contracts.games
         //IGameState CurrentState { get; set; }
         List<IGameOption> Options { get; set; }
         List<IPlayer> Players { get; set; }
-        void AddPlayer(Player player);
-        void RemovePlayer(Player player);
+        void AddPlayer(IPlayer player);
+        void RemovePlayer(IPlayer player);
         void StartGame();
         void EndGame();
     }

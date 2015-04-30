@@ -6,29 +6,29 @@ namespace BlackJack
 {
     public class BlackJackHandEvaluator : IHandEvaluator
     {
-        public List<HandChoicesEnum> EvaluateHand(List<Card> hand)
+        public List<HandPlaysEnum> EvaluateHand(List<Card> hand)
         {
-            var listOfPlays = new List<HandChoicesEnum>();
+            var listOfPlays = new List<HandPlaysEnum>();
 
             if (GoneBust(hand))
             {
-                listOfPlays.Add(HandChoicesEnum.Bust);
+                listOfPlays.Add(HandPlaysEnum.Bust);
                 return listOfPlays;
             }
 
             if (CanSplit(hand))
             {
-                listOfPlays.Add(HandChoicesEnum.Split);
+                listOfPlays.Add(HandPlaysEnum.Split);
             }
 
             if (CanStand(hand))
             {
-                listOfPlays.Add(HandChoicesEnum.Stand);
+                listOfPlays.Add(HandPlaysEnum.Stand);
             }
 
             if (CanHit(hand))
             {
-                listOfPlays.Add(HandChoicesEnum.Hit);
+                listOfPlays.Add(HandPlaysEnum.Hit);
             }
 
 
@@ -99,9 +99,10 @@ namespace BlackJack
             return (hand.Count.Equals(2) && (hand.First().Value.Equals(hand.Last().Value)));
         }
 
+        /* Don't stand if hand value is less than 11 */
         private static bool CanStand(IReadOnlyCollection<Card> hand)
         {
-            return (!GoneBust(hand));
+            return (!GoneBust(hand) && hand.Sum(c =>c.Value) > 10);
         }
 
         private static bool CanHit(IReadOnlyCollection<Card> hand)

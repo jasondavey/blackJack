@@ -28,13 +28,20 @@ namespace BlackJack
                 LastName = "Pistol"
             };
 
-            blackJackGame.AddPlayer(playerOne);
-            blackJackGame.AddPlayer(playerTwo);
-            blackJackGame.AddPlayer(playerThree);
-            blackJackGame.StartGame();
-            blackJackGame.Play();
-            
-            Console.ReadKey();
+            try
+            {
+                blackJackGame.AddPlayer(playerOne);
+                blackJackGame.AddPlayer(playerTwo);
+                blackJackGame.AddPlayer(playerThree);
+                blackJackGame.StartGame();
+                blackJackGame.Play();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.ReadKey();
+            }
+           
         }
     }
 }
