@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using BlackJack.contracts.states;
 
 namespace BlackJack.contracts.games
 {

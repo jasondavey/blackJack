@@ -1,252 +1,190 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Class Name="BlackJack.BlackJackHandEvaluator" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12.5" Y="0.5" Width="1.5" />
+  <Class Name="BlackJack.BlackJackHandEvaluator" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="2.75" Width="4.75" />
     <TypeIdentifier>
       <HashCode>AwAAAAAAAAgYAAIAAAAAAAAAAABAAAAAAAAAAgIAAAA=</HashCode>
       <FileName>BlackJackHandEvaluator.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="BlackJack.BlackJackStandardEdition" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="14.25" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>BAAAAAAAAAAAAAAAABAAAOAgCAAgAAAAgAgAAABQBAA=</HashCode>
-      <FileName>BlackJackStandardEdition.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="BlackJack.Card" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="9" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAEgAAAAAAA=</HashCode>
-      <FileName>Card.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="BlackJack.Dealer" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="10.75" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>BAAAAEAAACAAACAAAAAAAAAAAAAAAAAABAAgAAAAEAg=</HashCode>
-      <FileName>Dealer.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="BlackJack.DeckOfCards" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12.5" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAIAABAAAAAAAAAAAAAEAA=</HashCode>
-      <FileName>DeckOfCards.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="BlackJack.Dollar" BaseTypeListCollapsed="true">
-    <Position X="14.25" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
-      <FileName>Dollar.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
   <Class Name="BlackJack.GameFactory" BaseTypeListCollapsed="true">
-    <Position X="9" Y="2.5" Width="1.5" />
+    <Position X="10" Y="11" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameFactory.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="BlackJack.GameOption" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="10.75" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>GameOption.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
   <Class Name="BlackJack.Player" BaseTypeListCollapsed="true">
-    <Position X="12.5" Y="2.5" Width="1.5" />
+    <Position X="12.25" Y="15.5" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAACAAACAAAAAAAAAAAAAAAAAAAAAgAAAAAAg=</HashCode>
+      <HashCode>AAAAAEAACCAAACAAAAAAAAAAAAAAEAABgAAgAAAAAAg=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="BlackJack.BlackJack" Collapsed="true">
-    <Position X="10.75" Y="0.5" Width="1.5" />
+    <Position X="11.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BlackJack.GameOptions.AceValueGameOption" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="9" Y="0.5" Width="1.5" />
+  <Class Name="BlackJack.GameOptions.AceValueGameOption" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="7.75" Width="3" />
     <TypeIdentifier>
       <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameOptions\AceValueGameOption.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="BlackJack.GameStates.BlackJack.BlackJackGameState" Collapsed="true">
-    <Position X="3" Y="0.5" Width="1.5" />
+  <Class Name="BlackJack.GameStates.BlackJack.BlackJackGameState">
+    <Position X="4.5" Y="2.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAgAAAAAgAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAgAAAAAgAAAgAAQAAA=</HashCode>
       <FileName>GameStates\BlackJack\BlackJackGameState.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BlackJack.GameStates.BlackJack.GameNotStartedState">
-    <Position X="0.75" Y="1.75" Width="1.5" />
+  <Class Name="BlackJack.GameStates.BlackJack.DealerPlayingState">
+    <Position X="1.25" Y="3" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAAA=</HashCode>
-      <FileName>GameStates\BlackJack\GameNotStartedState.cs</FileName>
+      <FileName>GameStates\BlackJack\DealerPlayingState.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BlackJack.GameStates.BlackJack.GamePlayState">
-    <Position X="3" Y="1.75" Width="1.5" />
+  <Class Name="BlackJack.GameStates.BlackJack.GameEndedState">
+    <Position X="2.25" Y="5.5" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAAA=</HashCode>
-      <FileName>GameStates\BlackJack\GamePlayState.cs</FileName>
+      <FileName>GameStates\BlackJack\GameEndedState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BlackJack.GameStates.BlackJack.GameStartedState">
-    <Position X="5.25" Y="1.75" Width="1.5" />
+    <Position X="6.25" Y="5.5" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>GameStates\BlackJack\GameStartedState.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="BlackJack.contracts.games.IBlackJackGame">
-    <Position X="0.5" Y="7.75" Width="1.5" />
+  <Class Name="BlackJack.GameStates.BlackJack.GameInitializingState">
+    <Position X="7.75" Y="3" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>GameStates\BlackJack\GameInitializingState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="BlackJack.contracts.games.IBlackJackGame">
+    <Position X="5" Y="9.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAQAAAAAAAQAAAAAGAAAAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>contracts\games\IBlackJackGame.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="BlackJack.contracts.games.ICardGame" Collapsed="true">
-    <Position X="3.5" Y="6.5" Width="1.5" />
+    <Position X="8" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>contracts\games\ICardGame.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="BlackJack.contracts.games.IGame" Collapsed="true">
-    <Position X="0.5" Y="6.5" Width="1.5" />
+    <Position X="5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAABAAAAAgAAAgAAAAAAgAAABQAAA=</HashCode>
       <FileName>contracts\games\IGame.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="BlackJack.contracts.IAceValueGameOption">
-    <Position X="3.5" Y="8.75" Width="1.5" />
+    <Position X="13.75" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>contracts\IAceValueGameOption.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="BlackJack.contracts.IBlackJackGameState">
-    <Position X="4" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
-      <FileName>contracts\IBlackJackGameState.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="BlackJack.contracts.ICard" Collapsed="true">
-    <Position X="9" Y="4" Width="1.5" />
+  <Interface Name="BlackJack.contracts.ICard">
+    <Position X="18.75" Y="8.25" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>contracts\ICard.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="BlackJack.contracts.ICurrency" Collapsed="true">
-    <Position X="10.75" Y="3.75" Width="1.5" />
+    <Position X="10.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>contracts\ICurrency.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="BlackJack.contracts.IDealBehavior">
-    <Position X="12.5" Y="5.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>contracts\IDealBehavior.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Interface Name="BlackJack.contracts.IDealer">
-    <Position X="6.5" Y="5.75" Width="1.5" />
+    <Position X="15.75" Y="13.25" Width="4" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAEAA=</HashCode>
       <FileName>contracts\IDealer.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="BlackJack.contracts.IDeckOfCards">
-    <Position X="14.25" Y="3.75" Width="1.5" />
+    <Position X="15.5" Y="8" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>contracts\IDeckOfCards.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="BlackJack.contracts.IGameFactory">
-    <Position X="9" Y="4.75" Width="1.5" />
+    <Position X="10.25" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>contracts\IGameFactory.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="BlackJack.contracts.IGameOption" Collapsed="true">
-    <Position X="3.5" Y="7.5" Width="1.5" />
+  <Interface Name="BlackJack.contracts.IGameOption">
+    <Position X="13.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>contracts\IGameOption.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="BlackJack.contracts.IHandEvaluator" Collapsed="true">
-    <Position X="10.75" Y="4.5" Width="1.5" />
+  <Interface Name="BlackJack.contracts.IHandEvaluator">
+    <Position X="14.75" Y="1.5" Width="3.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>contracts\IHandEvaluator.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="BlackJack.contracts.IPlayer" Collapsed="true">
-    <Position X="6.5" Y="4.5" Width="1.5" />
+    <Position X="12.25" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAACAAAAAAAAAAAAAAAAAAAAAgAAAAAAg=</HashCode>
+      <HashCode>AAAAAEAACAAAACAAAAAAAAAAAAAAEAABgAAgAAAAAAg=</HashCode>
       <FileName>contracts\IPlayer.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="BlackJack.contracts.states.IBlackJackGameState">
-    <Position X="1.75" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>contracts\states\IBlackJackGameState.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="BlackJack.contracts.states.ICardGameState" Collapsed="true">
-    <Position X="4.75" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
-      <FileName>contracts\states\ICardGameState.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="BlackJack.contracts.states.IGameState" Collapsed="true">
-    <Position X="1.75" Y="3.5" Width="1.5" />
+  <Interface Name="BlackJack.contracts.states.IGameState">
+    <Position X="1" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>contracts\states\IGameState.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="BlackJack.contracts.states.IBlackJackGameState">
+    <Position X="4.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAQAAA=</HashCode>
+      <FileName>contracts\states\IBlackJackGameState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Enum Name="BlackJack.GameTypes">
-    <Position X="9" Y="6.25" Width="1.5" />
+    <Position X="12" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameTypes.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="BlackJack.HandChoicesEnum">
-    <Position X="10.75" Y="5.5" Width="1.5" />
+  <Enum Name="BlackJack.HandPlaysEnum">
+    <Position X="18.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAAIAAAAAAAACAAAQAAAAAAAAAAA=</HashCode>
-      <FileName>HandChoicesEnum.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAAICAAAAAAACAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>HandPlaysEnum.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

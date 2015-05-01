@@ -1,5 +1,8 @@
 ﻿using System;
+using BlackJack.contracts;
 using BlackJack.contracts.games;
+using BlackJack.domain;
+using BlackJack.GameOptions;
 
 namespace BlackJack
 {
@@ -7,25 +10,28 @@ namespace BlackJack
     {
         private static void Main(string[] args)
         {
+
+            //CardShuffleDemo();
+            //Console.ReadKey();
             var blackJackGame = (IBlackJackGame) GameFactory.BuildGame(GameTypes.BlackJackStandardEdition);
 
             
             var playerOne = new Player
             {
-                FirstName = "Winston",
-                LastName = "Parks"
+                FirstName = "Ben",
+                LastName = "Archibald"
             };
 
             var playerTwo = new Player
             {
-                FirstName = "Candy",
-                LastName = "Swavenski"
+                FirstName = "Nitin",
+                LastName = "Singhal"
             };
 
             var playerThree = new Player
             {
-                FirstName = "Pete",
-                LastName = "Pistol"
+                FirstName = "Heidi",
+                LastName = "Spillett"
             };
 
             try
@@ -42,6 +48,28 @@ namespace BlackJack
                 Console.ReadKey();
             }
            
+        }
+
+        private static void CardShuffleDemo()
+        {
+            var aceValueOption = new AceValueGameOption {AceValue = 11};
+            var deckOfCards = new DeckOfCards(aceValueOption);
+
+            BlackJackStandardEdition.DisplayConsoleBanner("Viewing the non shuffled Deck");
+
+            foreach (var card in deckOfCards.Cards)
+            {
+                Console.WriteLine("Index: {0} {1} : {2}",card.Index,card.Name,card.Value);
+            }
+
+            deckOfCards.Shuffle();
+
+            BlackJackStandardEdition.DisplayConsoleBanner("Viewing the shuffled Deck");
+
+            foreach (var card in deckOfCards.Cards)
+            {
+                Console.WriteLine("Index: {0} {1} : {2}", card.Index, card.Name, card.Value);
+            }
         }
     }
 }

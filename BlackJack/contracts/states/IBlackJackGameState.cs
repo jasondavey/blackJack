@@ -1,6 +1,9 @@
 ﻿namespace BlackJack.contracts.states
 {
-    public interface IBlackJackGameState : IGameState, ICardGameState
+    public interface IBlackJackGameState : IGameState
     {
+       void Play();
+
+       void EndGame();
     }
 }

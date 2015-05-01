@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using BlackJack.contracts;
+using BlackJack.domain;
 
 namespace BlackJack
 {

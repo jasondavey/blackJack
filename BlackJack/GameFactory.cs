@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using BlackJack.contracts;
 using BlackJack.contracts.games;
+using BlackJack.domain;
 using BlackJack.GameOptions;
 
 namespace BlackJack
 {
     internal class GameFactory : IGameFactory
     {
-        public IGame BuildGame(Enum gameType)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public static IGame BuildGame(GameTypes gameType)
         {
@@ -23,13 +21,13 @@ namespace BlackJack
                     var gameOptions = new List<IGameOption> {aceValueOption};
                     var cardDeck = new DeckOfCards(aceValueOption);
                     var currency = new Dollar();
-
-
                     var dealer = new Dealer(cardDeck)
                     {
-                        FirstName = "Dennis",
-                        LastName = "Dealer"
+                        FirstName = "Jason",
+                        LastName = "Davey"
                     };
+
+                   
                     return new BlackJackStandardEdition(gameOptions, dealer, currency);
                 }
             }

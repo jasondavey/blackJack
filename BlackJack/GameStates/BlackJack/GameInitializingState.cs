@@ -7,12 +7,12 @@ namespace BlackJack.GameStates.BlackJack
     {
         public GameInitializingState(IBlackJackGame game) : base(game)
         {
-            
+            Console.WriteLine("Loading Game dependencies...");
         }
 
         public override void StartGame()
         {
-            Console.WriteLine("Gathering Game dependencies");
+            
 
             if (Game.Dealer == null)
             {
@@ -23,7 +23,7 @@ namespace BlackJack.GameStates.BlackJack
                 throw new Exception("No Players at the table!");
             }
 
-            Console.WriteLine("Dependencies Gathered");
+            Console.WriteLine("Dependencies Loaded");
             Game.CurrentState.CurrentPlayer = Game.Dealer;
             Game.Dealer.Shuffle();
             Game.CurrentState = new GameStartedState(Game);

@@ -1,5 +1,7 @@
 ﻿using BlackJack.contracts;
 using BlackJack.contracts.games;
+using BlackJack.contracts.states;
+using BlackJack.domain;
 
 namespace BlackJack.GameStates.BlackJack
 {
@@ -7,7 +9,7 @@ namespace BlackJack.GameStates.BlackJack
     {
         protected BlackJackGameState(IBlackJackGame game)
         {
-            BlackJackStandardEdition.DisplayStateTransition("Entering " + GetType().Name);
+            BlackJackStandardEdition.DisplayConsoleBanner("Entering " + GetType().Name);
             Game = game;
         }
 

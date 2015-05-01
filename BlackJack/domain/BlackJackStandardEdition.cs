@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using BlackJack.contracts;
 using BlackJack.contracts.games;
+using BlackJack.contracts.states;
 using BlackJack.GameStates.BlackJack;
 
-namespace BlackJack
+namespace BlackJack.domain
 {
     public class BlackJackStandardEdition : IBlackJackGame
     {
@@ -17,6 +18,8 @@ namespace BlackJack
             Currency = currency;
             CurrentState = new GameInitializingState(this);
             Winners = new List<IPlayer>();
+
+            Console.WriteLine("{0} {1} will be this game's dealer.", dealer.FirstName, dealer.LastName);
         }
 
         private ICurrency Currency { get; set; }
@@ -195,7 +198,7 @@ namespace BlackJack
             return nextPlayer;
         }
 
-        public static void DisplayStateTransition(string message)
+        public static void DisplayConsoleBanner(string message)
         {
             const string asterisk = "*";
             const string space = " ";

@@ -1,4 +1,6 @@
-﻿namespace BlackJack.contracts
+﻿using BlackJack.domain;
+
+namespace BlackJack.contracts
 {
     public interface IPlayer
     {

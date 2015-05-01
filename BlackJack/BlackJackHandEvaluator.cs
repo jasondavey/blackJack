@@ -1,11 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using BlackJack.contracts;
+using BlackJack.domain;
 
 namespace BlackJack
 {
     public class BlackJackHandEvaluator : IHandEvaluator
     {
+        private const int MaxHandValue = 21;
+
         public List<HandPlaysEnum> EvaluateHand(List<Card> hand)
         {
             var listOfPlays = new List<HandPlaysEnum>();
@@ -37,8 +40,7 @@ namespace BlackJack
 
         private static bool GoneBust(IReadOnlyCollection<Card> hand)
         {
-            const int maxNonBustedValue = 21;
-            return (HandValues(hand).All(c => c > maxNonBustedValue));
+            return (HandValues(hand).All(c => c > MaxHandValue));
         }
 
         private static IEnumerable<int> HandValues(IReadOnlyCollection<Card> hand)
@@ -100,14 +102,25 @@ namespace BlackJack
         }
 
         /* Don't stand if hand value is less than 11 */
+
         private static bool CanStand(IReadOnlyCollection<Card> hand)
         {
-            return (!GoneBust(hand) && hand.Sum(c =>c.Value) > 10);
+            return (!GoneBust(hand) && hand.Sum(c => c.Value) > 10);
         }
 
+        /// <summary>
+        /// Can only hit if hand is not bust AND if hand value is less than 21
+        /// </summary>
+        /// <param name="hand"></param>
+        /// <returns>Return true if hand can hit</returns>
         private static bool CanHit(IReadOnlyCollection<Card> hand)
         {
-            return (!GoneBust(hand));
+            return (!GoneBust(hand) || GetHandValue(hand) < MaxHandValue);
+        }
+
+        private static short GetHandValue(IReadOnlyCollection<Card> hand)
+        {
+            return (short) hand.Sum(c => c.Value);
         }
     }
 }
