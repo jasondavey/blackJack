@@ -27,6 +27,7 @@ namespace BlackJack.domain
             {
                 if (DeckOfCards.Cards.Count.Equals(0))
                 {
+                    //TODO: figure out how to initialize deck of cards
                     throw new Exception("Yikes, we've run out of cards!");
                 }
                 var cardsGiven = 0;

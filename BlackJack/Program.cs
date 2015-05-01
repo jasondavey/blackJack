@@ -1,5 +1,4 @@
 ﻿using System;
-using BlackJack.contracts;
 using BlackJack.contracts.games;
 using BlackJack.domain;
 using BlackJack.GameOptions;
@@ -10,12 +9,11 @@ namespace BlackJack
     {
         private static void Main(string[] args)
         {
-
             //CardShuffleDemo();
-            //Console.ReadKey();
+            
             var blackJackGame = (IBlackJackGame) GameFactory.BuildGame(GameTypes.BlackJackStandardEdition);
 
-            
+
             var playerOne = new Player
             {
                 FirstName = "Ben",
@@ -47,7 +45,6 @@ namespace BlackJack
                 Console.WriteLine(e.Message);
                 Console.ReadKey();
             }
-           
         }
 
         private static void CardShuffleDemo()
@@ -59,7 +56,7 @@ namespace BlackJack
 
             foreach (var card in deckOfCards.Cards)
             {
-                Console.WriteLine("Index: {0} {1} : {2}",card.Index,card.Name,card.Value);
+                Console.WriteLine("Index: {0} {1} : {2}", card.Index, card.Name, card.Value);
             }
 
             deckOfCards.Shuffle();
@@ -70,6 +67,8 @@ namespace BlackJack
             {
                 Console.WriteLine("Index: {0} {1} : {2}", card.Index, card.Name, card.Value);
             }
+
+            Console.ReadKey();
         }
     }
 }

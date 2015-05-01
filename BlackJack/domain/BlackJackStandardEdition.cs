@@ -66,6 +66,7 @@ namespace BlackJack.domain
 
                 case HandPlaysEnum.Split:
                 {
+                    Console.WriteLine("Player Split not implemented yet!");
                     break;
                 }
             }

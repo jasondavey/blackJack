@@ -98,7 +98,7 @@ namespace BlackJack
 
         private static bool CanSplit(IReadOnlyCollection<Card> hand)
         {
-            return (hand.Count.Equals(2) && (hand.First().Value.Equals(hand.Last().Value)));
+            return (hand.Count.Equals(2) && AreCardsSameValue(hand));
         }
 
         /* Don't stand if hand value is less than 11 */
