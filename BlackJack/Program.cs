@@ -16,20 +16,20 @@ namespace BlackJack
 
             var playerOne = new Player
             {
-                FirstName = "Ben",
-                LastName = "Archibald"
+                FirstName = "Laine",
+                LastName = "Campbell"
             };
 
             var playerTwo = new Player
             {
-                FirstName = "Nitin",
-                LastName = "Singhal"
+                FirstName = "Mario",
+                LastName = "Tacke"
             };
 
             var playerThree = new Player
             {
-                FirstName = "Heidi",
-                LastName = "Spillett"
+                FirstName = "Jason",
+                LastName = "Davey"
             };
 
             try
